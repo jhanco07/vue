@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica</title>
+    </head>
+    <body>
+
+        <main>
+            <h1 v-show="conectado != 'false'" >Conectado</h1><br>
+            <select v-model="conectado" @change="changeValue($event)">
+                <option value=false>false</option>
+                <option value=true>true</option>
+            </select>
+        </main>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
