@@ -10,7 +10,18 @@
             <select v-model="conectado" @change="changeValue($event)">
                 <option value=false>false</option>
                 <option value=true>true</option>
-            </select>
+            </select><br>
+            <hr>
+            Edad: <input type="text" v-model="edad">
+            <h1 v-if="edad > 0 && edad < 18 ">No puede entrar</h1>
+            <h1 v-else-if="edad >18 && edad < 120 " >Puede entrar</h1>
+            <h1 v-else>Edad invalida</h1>
+            <hr>
+            <p v-for="(dia, index) in dias">Día {{index+1}} es {{dia}}</p>
+            <hr>
+            
+            Añadir elemento: <input type="text" v-model="newItem" ><button type="button" >Aceptar</button>
+
         </main>
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script src="js/main.js"></script>

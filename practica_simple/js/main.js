@@ -2,7 +2,10 @@
 new Vue({
     el: 'main',
     data: {
-        conectado: ''
+        conectado: '',
+        edad: 1,
+        dias: ['Lunes', 'Martes', 'Miercoles', 'Jueves','Viernes' ],
+        newItem: []
     },
     methods:{
         changeValue(event){
