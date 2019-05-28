@@ -17,10 +17,11 @@
             <h1 v-else-if="edad >18 && edad < 120 " >Puede entrar</h1>
             <h1 v-else>Edad invalida</h1>
             <hr>
-            <p v-for="(dia, index) in dias">Día {{index+1}} es {{dia}}</p>
+            <p v-for="(dia, index) in dias">{{index+1}}. Día {{index+1}} es {{dia}}</p>
             <hr>
-            
-            Añadir elemento: <input type="text" v-model="newItem" ><button type="button" >Aceptar</button>
+            <h2>Lista items</h2>
+            <p v-for="(item, index) in listItems">{{item}}</p>
+            Añadir elemento: <input type="text" v-model="newItem"  ><button type="button" v-on:click="addItemMethod()" >Aceptar</button>
 
         </main>
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
