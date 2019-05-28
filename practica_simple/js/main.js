@@ -14,7 +14,7 @@ new Vue({
             console.log(event.target.value);
         },
         addItemMethod(){
-            this.listItems.unshift(this.newItem);
+            this.listItems.unshift(this.newItem);   
             this.newItem='';
         },
         alerta(){
