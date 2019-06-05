@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica</title>
+    </head>
+    <body>
+        <main>
+          <h1>{{mensajeAlReves}}</h1><hr>
+          <p v-for="(juego, index) in mejoresJuegos" >{{juego.titulo}}</p>
+          <input type="range" min="0" max="10" v-model="minimo">
+          <hr>
+          <select v-model="seleccionGenero" v-on:change="buscarJuegosXgenero()" >
+            <option v-for="(genero, index) in generos" :value="genero.nombre">{{index}}- {{genero.nombre}}</option>    
+          </select>
+          <h2>Resultado Juegos:</h2>
+          <h3 v-for="(juego, index) in juegosFiltrados">{{juego.titulo}}</h3>
+          <hr>
+          Nombre juego: <input type="text" v-model="busquedaJuego" v-on:keyup="buscarJuego()">
+          <h2 v-for="(juego, index) in juegosFiltrados2">{{juego.titulo}}</h2><hr>
+          Nombre Juego:  <input  list="browsers" v-model="textoPredict" v-on:keyup="predecirTexto()">
+          <datalist id="browsers" >
+          <option v-for="(juego, index) in juegosPredecidos" :value=juego.titulo>
+          </datalist>
+
+        </main>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="js/filtros.js"></script>
+    </body>
+</html>
