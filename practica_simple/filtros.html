@@ -19,7 +19,7 @@
           <h2 v-for="(juego, index) in juegosFiltrados2">{{juego.titulo}}</h2><hr>
           Nombre Juego:  <input  list="browsers" v-model="textoPredict" v-on:keyup="predecirTexto()">
           <datalist id="browsers" >
-          <option v-for="(juego, index) in juegosPredecidos" :value=juego.titulo>
+             <option v-for="(juego, index) in juegosPredecidos" :value=juego.titulo>
           </datalist>
 
         </main>

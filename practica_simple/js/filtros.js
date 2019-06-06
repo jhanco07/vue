@@ -22,7 +22,6 @@ new Vue({
     
         ]
     },
-    
     methods:{
         buscarJuegosXgenero(){
            this.juegosFiltrados=[];

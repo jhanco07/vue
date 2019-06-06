@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica</title>
+        <style>
+            .completado{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Actividades completadas:{{tareasCompletadas.length}}</h1>
+            Añadir actividad:
+            <input type="text" v-model="tareaNueva">
+            <button type="button" v-on:click="agregarTarea()" >Añadir</button>
+           <p v-for="(actividad,index) in actividades" v-on:click="completarActividad(actividad)" 
+           v-bind:class="{completado: actividad.completado}" >{{actividad.nombre}}</p>
+
+
+        </main>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="js/dataBinding.js"></script>
+    </body>
+</html>
