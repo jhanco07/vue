@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax Axios</title>
+    </head>
+   
+    <body>
+        <main>
+            <h2>Personas</h2>
+            <ul> 
+                 <img v-for="(persona, index) in personas" v-bind:src="persona.picture.thumbnail" alt="Foto" 
+                  :alt="persona.name.first" :title="persona.name.first">
+            </ul>
+
+        </main>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/ajax-axios.js"></script>
+    </body>
+</html>
